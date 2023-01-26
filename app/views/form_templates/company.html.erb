@@ -1,0 +1,58 @@
+
+p "Companies: Please fill out the following information with your preferences"
+
+If
+	Companies
+	redirect: Companies_form
+end 
+
+If 
+	Applicant
+	redirect: Applicant_form
+end
+
+company_age = gets.to_i
+company_hs_year = gets.to_i
+company_current_college_year = gets.to_i
+company_location = gets.to_s
+company_work_pref = gets.to_s
+
+candidate_age = gets.to_i
+candidate_hs_year = gets.to_i
+company_current_college_year = gets.to_i
+company_location = gets.to_s
+company_work_pref = gets.to_s
+
+If 
+	candidate_age >= company_age & 
+ 	candidate_hs_year >= company_hs_year &
+	candidate_current_college_year >= company_current_college_year &
+	candidate_location == company_location &
+	candidate_work_pref == company_work_pref
+	
+	p “Candidate meets qualifications”
+else
+	p “Candidate is 0% fit for this job.”
+end
+
+company_gpa = gets.to_i
+company_skills = gets.to_s
+company_industry_exp = gets.to_s
+company_size_org = gets.to_s
+company_AP = gets.to_i
+company_adv_classes = gets.to_i
+
+candidate_gpa = gets.to_i
+candidate_skills = gets.to_s
+candidate_industry_exp = gets.to_s
+candidate_size_org = gets.to_s
+candidate_AP = gets.to_i
+candidate_adv_classes = gets.to_i
+
+
+Fitness = (GPA + skills + industry_experience + AP_classes_yes_or_no + Honors_classes_yes_or_no)
+
+
+
+
+
